@@ -1,0 +1,4 @@
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+helm upgrade --install --namespace monitoring --create-namespace loki grafana/loki --values values-loki.yaml --version 5.8.5
+helm upgrade --install --namespace monitoring --create-namespace promtail grafana/promtail --values values-promptail.yaml --version 6.11.5
